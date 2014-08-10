@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Anatomy Of Code</title>
+	<script type="text/javascript" src="//use.typekit.net/wqv4slo.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+	<header class="intro">
+		<div class="container">
+			<h1>Anatomy Of Code</h1>
+			<h4>a visual representation of code with tooltips</h4>
+		</div>
+	</header>
+	<section>
+		<header class="language">
+			<h2>Javascript</h2>
+			<p>hover over the code to see details</p>
+		</header>
+		<ul>
+			<li>
+				<div class="container">
+					<div class="display">
+						<h2>Data Types</h2>
+						<p>In Javascript, there are multiple ways to specify data. <strong>Strings</strong>, <strong>integers</strong>/<strong>numbers</strong> and <strong>boolean</strong> values are the simplest forms.</p>
+						<p><strong>Strings</strong> are a collection of letters, numbers and punctuation. You can write anything in a string as long as you put quotation marks around it.</p>
+						<p><strong>Integers</strong>/<strong>Numbers</strong> are actual numbers. They do not need quotation marks.</p>
+						<p><strong>Boolean</strong> values are true and false. They are often used for comparison purposes.</p>
+					</div>
+					<div class="code">
+						<div class="chunk">
+							<i class="data-string">"Hello World!"</i><br>
+							<i class="data-integer">100</i><br>
+							<i class="data-boolean">true</i><br>
+							<i class="data-boolean">false</i><br>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="container">
+					<div class="display">
+						<h2>Variables</h2>
+						<p>Within Javascript and many other programming languages, data can be stored in what are called <strong>variables</strong>.</p>
+						<p><strong>Variables</strong> are used to store information that may be used often, or store the result of a computational equation.</p>
+						<p>To declare a new variable, you must declare the construct with the term <strong>var</strong> and than a name.</p>
+						<p>In order to assign data to the variable, use a single <strong>equals</strong> sign followed by a string, integer, boolean, object or array.</p>
+						<p>To <strong>call</strong> the variable, simply call it by the name you assigned to it.</p>
+					</div>
+					<div class="code">
+						<div class="chunk">
+							<i class="declare">var</i> <i class="name">myFirstVariable</i> <i class="equal">=</i> <i class="data-string"><span class="value"> "Hello World!"</span></i>;<br>
+							<i class="callVar">myFirstVariable</i>;<br><br>
+							<i class="output"> > "Hello World!" </i><br><br>
+							<i class="declare">var</i> <i class="name">mySecondVariable</i> <i class="equal">=</i> <i class="data-integer"><span class="value"> 99</span></i>;<br>
+							<i class="callVar">mySecondVariable</i>;<br><br>
+							<i class="output"> > 99 </i>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="container">
+					<div class="display">
+						<h2>Computational Operators</h2>
+						<p>Specific characters can be used to perform mathematical equations, combine data and increment/decrement numbers</p>
+						<p>The <strong>plus</strong> character is used for adding two values.</p>
+						<p>The <strong>plus</strong> character can also be used to attach values to each other. This is called concatenation</p>
+						<p>The <strong>minus</strong> character is used for minusing one value from another</p>
+						<p>The <strong>asterisk</strong> character is used for multiplying values.</p>
+						<p>The <strong>forward slash</strong> character is used for division.</p>
+						<p>Two <strong>plus</strong> signs are used to represent incrementation</p>
+						<p>Two <strong>minus</strong> signs are used to represent decrementation</p>
+					</div>
+					<div class="code">
+						<div class="chunk">
+							<i class="data-integer">5</i> <i class="compOperator">+</i> <i class="data-integer">10</i><br>
+							<i class="output"> > 15 </i><br><br>
+							<i class="data-string">"Hello"</i> <i class="compOperator">+</i> <i class="data-string">"World!"</i><br>
+							<i class="output"> > "Hello World!" </i><br><br>
+							<i class="data-integer">2</i> <i class="compOperator">-</i> <i class="data-integer">7</i><br>
+							<i class="output"> > -5 </i><br><br>
+							<i class="data-integer">7</i> <i class="compOperator">*</i> <i class="data-integer">5</i><br>
+							<i class="output"> > 35 </i><br><br>
+							<i class="data-integer">15</i> <i class="compOperator">/</i> <i class="data-integer">3</i><br>
+							<i class="output"> > 5 </i><br><br>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="container">
+					<div class="display">
+						<h2>Comparison Operators</h2>
+						<p>Within Javascript, certain characters and a combination of characters are used to compare data. These return <strong>boolean</strong> values which can be used to control the flow of the program</p>
+						<p>The <strong>==</strong> characters check for equality between values. Notice the use of two equal signs to differentiate between the use of the variable assignment operator.</p>
+						<p><strong>!==</strong> is used to check inequality between values</p>
+						<p>In order to check equality between value and data type, use <strong>===</strong>. For inequality, use <strong>!===</strong>.</p>
+						<p>To see if a value is greater than another, use the <strong>></strong> character</p>
+						<p>To see if a value is less than another, use the <strong><</strong> character</p>
+						<p>To check if a value is greater than or equal to another, use the <strong>>=</strong> operator</p>
+						<p>To check if a value is less than or equal to another, use the <strong><=</strong> operator</p>
+					</div>
+					<div class="code">
+						<div class="chunk">
+							<i class="data-string">"hello"</i> <i class="comparisonOperator">==</i> <i class="data-string">"world"</i>;<br>
+							<i class="output"> > false </i><br><br>
+							<i class="data-integer">12</i> <i class="comparisonOperator">===</i> <i class="data-integer">12</i>;<br>
+							<i class="output"> > true </i><br><br>
+							<i class="data-string">"Hello"</i> <i class="comparisonOperator">!==</i> <i class="data-integer">5</i>;<br>
+							<i class="output"> > true </i><br><br>
+							<i class="data-string">"Hello"</i> <i class="comparisonOperator">!===</i> <i class="data-string">"World"</i>;<br>
+							<i class="output"> > false </i><br><br>
+							<i class="data-integer">5</i> <i class="comparisonOperator">></i> <i class="data-integer">2</i>;<br>
+							<i class="output"> > true </i><br><br>
+							<i class="data-integer">10</i> <i class="comparisonOperator"><</i> <i class="data-integer">2</i>;<br>
+							<i class="output"> > false </i><br><br>
+							<i class="data-integer">10</i> <i class="comparisonOperator">>=</i> <i class="data-integer">10</i>;<br>
+							<i class="output"> > true </i><br><br>
+							<i class="data-integer">8</i> <i class="comparisonOperator"><=</i> <i class="data-integer">12</i>;<br>
+							<i class="output"> > true </i><br><br>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="container">
+					<div class="display">
+						<h2>Functions</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ratione, vitae quas similique, reiciendis officiis autem harum laudantium culpa blanditiis aperiam? Ipsa dolor minima assumenda. Amet numquam nostrum sit neque.</p>
+					</div>
+					<div class="code">
+						<div class="chunk">
+							<span class="declare">function</span> <span class="name">addMe</span>(<span class="parameters">a</span>,<span class="parameters">b</span>){<br>
+							    <i class="block">return <span class="parameters">a</span> + <span class="parameters">b</span>;</i><br>
+							}<br>
+							<br>
+							<span class="ref">addMe</span>(<span class="arg">2</span>, <span class="arg">4</span>);<br><br>
+							<i class="output"> > 8</i>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="container">
+					<div class="display">
+						<h2>Array</h2>
+						<p></p>
+					</div>
+					<div class="code">
+						<div class="chunk">
+							<i class="declare">var</i> <i class="name">myFirstArray</i> <i class="equal">=</i> <i class="data-array">[<i class="data-string">"string"</i>,<i class="data-integer">99</i>, <i class="data-boolean">true</i>]</i>;
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="container">
+					<div class="display">
+						<h2>Object</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ratione, vitae quas similique, reiciendis officiis autem harum laudantium culpa blanditiis aperiam? Ipsa dolor minima assumenda. Amet numquam nostrum sit neque.</p>
+					</div>
+					<div class="code">
+						<div class="chunk">
+							<i class="declare">var</i> <i class="name">myFirstObject</i> <i class="equal">=</i> <i class="data-object">{</i> <i class="object-name">itemOne:</i> <i class="data-string"><span class="object-value">"String"</span></i>, <i class="object-name">itemTwo:</i> <i class="data-integer"><span class="object-value">1027</span></i>, <i class="object-name">itemThree:</i> <i class="data-boolean"><span class="object-value">true</span></i>  }</i>;
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</section>
+	<section>
+
+	</section>
+	<footer>
+		<div class="container">
+			<p>made with love for those who say they hate javascript. no, you don't.</p>
+			<p>made with love &hearts; by <a href="http://drewminns.com">drewminns</a></p>
+		</div>
+	</footer>
+
+
+
+	<script src="scripts/vendor/jquery.min.js"></script>
+	<script src="scripts/vendor/modernizr.js"></script>
+	<script src="scripts/main.min.js"></script>
+
+</body>
+</html>

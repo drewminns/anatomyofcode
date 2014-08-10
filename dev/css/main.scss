@@ -1,0 +1,255 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	-moz-border-box: box-sizing;
+	-webkit-border-box: box-sizing;
+}
+
+@import '_mixins';
+@import '_colours'; // Better Colours
+@import '_grid'; // Better Colours
+
+// Specify the number of columns and set column and gutter widths
+$columns: 12;
+$column-width: 60;
+$gutter-width: 20;
+
+// Remove the definition below for a pixel-based layout
+$total-width: 100%;
+
+/* ---------------------------
+Fonts are located in dist/css/fonts bro
+------------------------------ */
+@include importfont('Montserrat Regular', 'fonts/Montserrat-Regular', 400);
+@include importfont('Quicksand Bold', 'fonts/Quicksand-Bold', 700);
+
+// **********************
+// Set Variables Here
+//***********************
+$basefontsize: 14px;
+$baselineheight: 1.5;
+$basefontcolour: #333;
+$basefontfamily: "azo-sans-web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$headingsfontfamily: "azo-sans-web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$linkcolour: #0074D9;
+
+body {
+	height: 100%;
+	color: #333;
+  font-weight: 300;
+	font-size: $basefontsize;
+	font-family: $basefontfamily;
+	background-color: #FEFDFD;
+}
+
+// Headings
+// -------------------------
+h1, h2, h3, h4, h5, h6, p, ul {
+	-webkit-margin-before:0em;
+	-webkit-margin-after:0em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+  font-weight: 700;
+  text-transform: lowercase;
+	font-family: $headingsfontfamily;
+	text-rendering: optimizelegibility; // Fix the character spacing for headings
+	a {
+		color: $basefontcolour;
+	}
+}
+
+h1 {
+	@include fontbase(64px);
+}
+
+h2 {
+	@include fontbase(52px);
+}
+
+h3 {
+	@include fontbase(42px);
+}
+
+h4 {
+	@include fontbase(24px);
+}
+
+h5 {
+	@include fontbase(16px);
+}
+
+// General Typography
+// -------------------------
+p {
+	@include fontbase(18px);
+	margin-bottom: $basefontsize * 1.2;
+}
+
+a {
+	color: $linkcolour;
+	text-decoration: none;
+}
+
+// Lists
+// --------------------------------------------------
+
+// Unordered and Ordered lists
+ul, ol {
+	margin: 0;
+	padding: 0;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+	margin-bottom: 0;
+}
+
+// **********************
+// All Styles Go Below Here Bud
+//***********************
+
+.container {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+@mixin fullwidth() {
+	float: left;
+	width: 100%;
+	display: block;
+}
+
+header.intro {
+	@include fullwidth();
+	background: $dark;
+	text-align: center;
+	color: #FEFDFD;
+	padding: 100px 0;
+	h4 {
+		color: $yellowish;
+	}
+}
+
+section {
+	@include fullwidth();
+	header.language {
+		text-align: center;
+		background: $yellowish;
+		padding: 25px 0;
+	}
+	ul {
+		li {
+			@include fullwidth();
+			padding: 80px 0;
+			&:nth-child(2n) {
+				background: $pinkish;
+				color: #FEFDFD;
+			}
+			&:nth-child(4n) {
+				background: $pinkish;
+				color: #FEFDFD;
+			}
+			.code {
+				@include column(6);
+				background-color: #FEFDFD;
+				border-radius: 5px;
+				padding: 25px;
+				box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+				border: 1px solid rgba(0,0,0,0.2);
+			}
+			.display {
+				@include column(6);
+			}
+		}
+	}
+}
+
+footer {
+	@include fullwidth();
+	padding: 50px 0;
+	background: $dark;
+	color: #FEFDFD;
+	text-align: center;
+}
+
+// ****************
+// Pre Styles
+// ****************
+
+.chunk {
+	font-family: "ff-ernestine-web-pro",sans-serif;
+	margin: 0;
+	font-size: 28px;
+	color: $basefontcolour;
+	// white-space: pre;
+	i {
+		cursor: pointer;
+	}
+	.declare {
+		color: #CC333F;
+	}
+	.name {
+		color: #00A0B0;
+	}
+	.parameters {
+		color: #A8AD80;
+	}
+	.ref, .callVar {
+		color: $orange;
+	}
+	.arg {
+		color: #4ECDC4;
+	}
+	.data-string {
+		color: #556270;
+	}
+	.data-integer {
+		color: #4ECDC4;
+	}
+	.data-boolean {
+		color: #C7F464;
+	}
+	.data-array {
+		color: $gray;
+	}
+	.data-object {
+		color: $darkGray;
+	}
+	.object-name {
+		color: $orange;
+	}
+}
+
+@import '_hint';
+
+@media all and (max-width: 480px) {
+	.container {
+		max-width: 95%;
+	}
+	section {
+		padding: 50px 0;
+		.display {
+			@include column(12);
+			padding-bottom: 10px;
+		}
+		.code {
+			@include column(12);
+			padding: 10px 5px;
+			.chunk {
+				font-size: 18px;
+			}
+		}
+	}
+	.hint, [data-hint] {
+		position: relative;
+		display: inline;
+	}
+}
+
+
