@@ -17,7 +17,7 @@ anatomy.details = [
 		{ selector: '.callVar', hint: 'Call Variable', position: 'right'},
 		{ selector: '.arg', hint: 'Pass arguments into the parameters', position: 'right'},
 		{ selector: '.block', hint: 'Block Statement', position: 'top'},
-		{ selector: '.output', hint: 'Output', position: 'bottom'},
+		{ selector: '.output', hint: 'Output', position: 'right'},
 		{ selector: '.compOperator', hint: 'Computational Operator', position: 'right'},
 		{ selector: '.comparisonOperator', hint: 'Comparison Operator', position: 'right'}
 ];

@@ -10,17 +10,21 @@
 </head>
 <body>
 
-	<header class="intro">
+	<aside class="intro">
 		<div class="container">
 			<h1>Anatomy Of Code</h1>
-			<h4>a visual representation of code with tooltips</h4>
+			<h4>a visual representation of code with tooltips.</h4>
+			<h5>Starring Javascript.</h5>
+			<footer>
+				<div class="container">
+					<p>made with love for those who say they hate javascript. no, you don't.</p>
+					<p>made with love &hearts; by <a href="http://drewminns.com">drewminns</a></p>
+					<p>contribute <a href="http://github.com/drewminns/anatomyofcode">here</a></p>
+				</div>
+			</footer>
 		</div>
-	</header>
+	</aside>
 	<section>
-		<header class="language">
-			<h2>Javascript</h2>
-			<p>hover over the code to see details</p>
-		</header>
 		<ul>
 			<li>
 				<div class="container">
@@ -55,10 +59,10 @@
 						<div class="chunk">
 							<i class="declare">var</i> <i class="name">myFirstVariable</i> <i class="equal">=</i> <i class="data-string"><span class="value"> "Hello World!"</span></i>;<br>
 							<i class="callVar">myFirstVariable</i>;<br><br>
-							<i class="output"> > "Hello World!" </i><br><br>
+							<i class="output hint--success"> > "Hello World!" </i><br><br>
 							<i class="declare">var</i> <i class="name">mySecondVariable</i> <i class="equal">=</i> <i class="data-integer"><span class="value"> 99</span></i>;<br>
 							<i class="callVar">mySecondVariable</i>;<br><br>
-							<i class="output"> > 99 </i>
+							<i class="output hint--success"> > 99 </i>
 						</div>
 					</div>
 				</div>
@@ -79,15 +83,15 @@
 					<div class="code">
 						<div class="chunk">
 							<i class="data-integer">5</i> <i class="compOperator">+</i> <i class="data-integer">10</i><br>
-							<i class="output"> > 15 </i><br><br>
+							<i class="output hint--success"> > 15 </i><br><br>
 							<i class="data-string">"Hello"</i> <i class="compOperator">+</i> <i class="data-string">"World!"</i><br>
-							<i class="output"> > "Hello World!" </i><br><br>
+							<i class="output hint--success"> > "Hello World!" </i><br><br>
 							<i class="data-integer">2</i> <i class="compOperator">-</i> <i class="data-integer">7</i><br>
-							<i class="output"> > -5 </i><br><br>
+							<i class="output hint--success"> > -5 </i><br><br>
 							<i class="data-integer">7</i> <i class="compOperator">*</i> <i class="data-integer">5</i><br>
-							<i class="output"> > 35 </i><br><br>
+							<i class="output hint--success"> > 35 </i><br><br>
 							<i class="data-integer">15</i> <i class="compOperator">/</i> <i class="data-integer">3</i><br>
-							<i class="output"> > 5 </i><br><br>
+							<i class="output hint--success"> > 5 </i><br><br>
 						</div>
 					</div>
 				</div>
@@ -108,21 +112,21 @@
 					<div class="code">
 						<div class="chunk">
 							<i class="data-string">"hello"</i> <i class="comparisonOperator">==</i> <i class="data-string">"world"</i>;<br>
-							<i class="output"> > false </i><br><br>
+							<i class="output hint--success"> > false </i><br><br>
 							<i class="data-integer">12</i> <i class="comparisonOperator">===</i> <i class="data-integer">12</i>;<br>
-							<i class="output"> > true </i><br><br>
+							<i class="output hint--success"> > true </i><br><br>
 							<i class="data-string">"Hello"</i> <i class="comparisonOperator">!==</i> <i class="data-integer">5</i>;<br>
-							<i class="output"> > true </i><br><br>
+							<i class="output hint--success"> > true </i><br><br>
 							<i class="data-string">"Hello"</i> <i class="comparisonOperator">!===</i> <i class="data-string">"World"</i>;<br>
-							<i class="output"> > false </i><br><br>
+							<i class="output hint--success"> > false </i><br><br>
 							<i class="data-integer">5</i> <i class="comparisonOperator">></i> <i class="data-integer">2</i>;<br>
-							<i class="output"> > true </i><br><br>
+							<i class="output hint--success"> > true </i><br><br>
 							<i class="data-integer">10</i> <i class="comparisonOperator"><</i> <i class="data-integer">2</i>;<br>
-							<i class="output"> > false </i><br><br>
+							<i class="output hint--success"> > false </i><br><br>
 							<i class="data-integer">10</i> <i class="comparisonOperator">>=</i> <i class="data-integer">10</i>;<br>
-							<i class="output"> > true </i><br><br>
+							<i class="output hint--success"> > true </i><br><br>
 							<i class="data-integer">8</i> <i class="comparisonOperator"><=</i> <i class="data-integer">12</i>;<br>
-							<i class="output"> > true </i><br><br>
+							<i class="output hint--success"> > true </i><br><br>
 						</div>
 					</div>
 				</div>
@@ -140,7 +144,7 @@
 							}<br>
 							<br>
 							<span class="ref">addMe</span>(<span class="arg">2</span>, <span class="arg">4</span>);<br><br>
-							<i class="output"> > 8</i>
+							<i class="output hint--success"> > 8</i>
 						</div>
 					</div>
 				</div>
@@ -173,15 +177,6 @@
 			</li>
 		</ul>
 	</section>
-	<section>
-
-	</section>
-	<footer>
-		<div class="container">
-			<p>made with love for those who say they hate javascript. no, you don't.</p>
-			<p>made with love &hearts; by <a href="http://drewminns.com">drewminns</a></p>
-		</div>
-	</footer>
 
 
 

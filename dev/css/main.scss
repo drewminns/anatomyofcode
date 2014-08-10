@@ -18,29 +18,23 @@ $gutter-width: 20;
 // Remove the definition below for a pixel-based layout
 $total-width: 100%;
 
-/* ---------------------------
-Fonts are located in dist/css/fonts bro
------------------------------- */
-@include importfont('Montserrat Regular', 'fonts/Montserrat-Regular', 400);
-@include importfont('Quicksand Bold', 'fonts/Quicksand-Bold', 700);
-
 // **********************
 // Set Variables Here
 //***********************
-$basefontsize: 14px;
+$basefontsize: 12px;
 $baselineheight: 1.5;
 $basefontcolour: #333;
-$basefontfamily: "azo-sans-web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$headingsfontfamily: "azo-sans-web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$basefontfamily: "minion-pro-display", Georgia, Times, "Times New Roman", serif;
+$headingsfontfamily: "brandon-grotesque", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $linkcolour: #0074D9;
 
 body {
 	height: 100%;
-	color: #333;
+	color: #626262;
   font-weight: 300;
 	font-size: $basefontsize;
 	font-family: $basefontfamily;
-	background-color: #FEFDFD;
+	background-color: #1F253D;
 }
 
 // Headings
@@ -53,8 +47,9 @@ h1, h2, h3, h4, h5, h6, p, ul {
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 	padding: 0;
-  font-weight: 700;
-  text-transform: lowercase;
+  font-weight: 500;
+  color: #333;
+  text-transform: uppercase;
 	font-family: $headingsfontfamily;
 	text-rendering: optimizelegibility; // Fix the character spacing for headings
 	a {
@@ -63,7 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	@include fontbase(64px);
+	@include fontbase(48px);
 }
 
 h2 {
@@ -79,13 +74,13 @@ h4 {
 }
 
 h5 {
-	@include fontbase(16px);
+	@include fontbase(18px);
 }
 
 // General Typography
 // -------------------------
 p {
-	@include fontbase(18px);
+	@include fontbase(16px);
 	margin-bottom: $basefontsize * 1.2;
 }
 
@@ -125,35 +120,63 @@ ol ul {
 	display: block;
 }
 
-header.intro {
-	@include fullwidth();
-	background: $dark;
+aside.intro {
+	width:22%;
+	height: 100%;
+	position: fixed;
+	float: left;
+	display: inline-block;
+	background: #1B1E25;
 	text-align: center;
 	color: #FEFDFD;
-	padding: 100px 0;
-	h4 {
+	padding: 80px 20px;
+	.container {
+		position: relative;
+		footer {
+			margin-top: 50px;
+			color: $gray;
+			text-align: center;
+			a {
+				color: $turqouise;
+			}
+		}
+	}
+	h1 {
+		font-weight: 700;
 		color: $yellowish;
+		margin-bottom: 0.8em;
+	}
+	h4 {
+		margin-bottom: 1em;
+		color: #fafafa;
+	}
+	h5 {
+		margin-bottom: 2em;
+		color: #fafafa;
 	}
 }
 
 section {
-	@include fullwidth();
+	position: relative;
+	left: 22%;
+	width: 78%;
+	float: left;
+	display: inline-block;
 	header.language {
 		text-align: center;
-		background: $yellowish;
+		background: #11A8AB;
 		padding: 25px 0;
 	}
 	ul {
 		li {
 			@include fullwidth();
-			padding: 80px 0;
-			&:nth-child(2n) {
-				background: $pinkish;
-				color: #FEFDFD;
+			padding: 100px 25px;
+			position: relative;
+			&:nth-child(even) {
+				background: #FFFFFF;
 			}
-			&:nth-child(4n) {
-				background: $pinkish;
-				color: #FEFDFD;
+			&:nth-child(odd) {
+				background: #FAFAFA;
 			}
 			.code {
 				@include column(6);
@@ -165,17 +188,17 @@ section {
 			}
 			.display {
 				@include column(6);
+				h2 {
+					@include fontbase(36px);
+					line-height: 1em;
+					margin-bottom: 0.5em;
+					padding-bottom: 0.5em;
+					display: inline-block;
+					border-bottom: 1px solid #333;
+				}
 			}
 		}
 	}
-}
-
-footer {
-	@include fullwidth();
-	padding: 50px 0;
-	background: $dark;
-	color: #FEFDFD;
-	text-align: center;
 }
 
 // ****************
@@ -183,13 +206,15 @@ footer {
 // ****************
 
 .chunk {
-	font-family: "ff-ernestine-web-pro",sans-serif;
+	font-family: $headingsfontfamily;
+	font-weight: 100;
 	margin: 0;
 	font-size: 28px;
 	color: $basefontcolour;
 	// white-space: pre;
 	i {
 		cursor: pointer;
+		font-style: normal;
 	}
 	.declare {
 		color: #CC333F;
@@ -232,17 +257,28 @@ footer {
 	.container {
 		max-width: 95%;
 	}
+
+	aside.intro {
+		width:100%;
+		height: 100%;
+		position: static;
+		float: left;
+		padding: 50px 20px;
+	}
 	section {
-		padding: 50px 0;
-		.display {
+		position: static;
+		left: 0;
+		width: 100%;
+		ul li .display {
 			@include column(12);
 			padding-bottom: 10px;
 		}
-		.code {
+		ul li .code {
 			@include column(12);
 			padding: 10px 5px;
 			.chunk {
 				font-size: 18px;
+				padding: 10px;
 			}
 		}
 	}
