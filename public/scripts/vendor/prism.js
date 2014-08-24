@@ -480,7 +480,7 @@ Prism.languages.clike = {
 	'boolean': /\b(true|false)\b/g,
 	'array': /(\[)|(\])/g,
 	'object': /(\{)|(\})/g,
-	'parantheses': /(\()|(\))/g,
+	'parentheses': /(\()|(\))/g,
 	'argument':/(?:\(\s*([A-z0-9_$]+,)*\s*([A-z0-9_$]+)+\s*\))/,
 	'function': {
 		pattern: /[a-z0-9_]+\(/ig,
