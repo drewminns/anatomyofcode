@@ -329,9 +329,9 @@ Token.stringify = function(o, language, parent) {
 		parent: parent
 	};
 
-	if (env.type == 'comment') {
-		env.attributes['spellcheck'] = 'true';
-	}
+	// if (env.type == 'comment') {
+	// 	env.attributes['spellcheck'] = 'true';
+	// }
 
 	_.hooks.run('wrap', env);
 
@@ -478,7 +478,10 @@ Prism.languages.clike = {
 	},
 	'keyword': /\b(if|else|while|do|for|return|in|instanceof|function|new|try|throw|catch|finally|null|break|continue)\b/g,
 	'boolean': /\b(true|false)\b/g,
-	// 'argument':/\(\s*([A-z0-9_$]+,)*\s*([A-z0-9_$]+)+\s*\)/,
+	'array': /(\[)|(\])/g,
+	'object': /(\{)|(\})/g,
+	'parantheses': /(\()|(\))/g,
+	'argument':/(?:\(\s*([A-z0-9_$]+,)*\s*([A-z0-9_$]+)+\s*\))/,
 	'function': {
 		pattern: /[a-z0-9_]+\(/ig,
 		inside: {

@@ -29,27 +29,6 @@
 			<li>
 				<div class="container">
 					<div class="display">
-						<h2>View your data</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ratione, vitae quas similique, reiciendis officiis autem harum laudantium culpa blanditiis aperiam? Ipsa dolor minima assumenda. Amet numquam nostrum sit neque.</p>
-					</div>
-					<div class="code">
-						<pre>
-							<code class="language-javascript">
-							console.log("Hello, I'm a string!");
-							// Outputs to the console
-							"Hello, I'm a string!"
-
-							console.log(061314);
-							// Outputs to the console
-							061314
-							</code>
-						</pre>
-					</div>
-				</div>
-			</li>
-			<li>
-				<div class="container">
-					<div class="display">
 						<h2>Data Types</h2>
 						<p>In Javascript, there are multiple ways to specify data. <strong>Strings</strong>, <strong>integers</strong>/<strong>numbers</strong> and <strong>boolean</strong> values are the simplest forms.</p>
 						<p><strong>Strings</strong> are a collection of letters, numbers and punctuation. You can write anything in a string as long as you put quotation marks around it.</p>
@@ -71,6 +50,49 @@
 			<li>
 				<div class="container">
 					<div class="display">
+						<h2>Comments</h2>
+						<p>When writing an form of code, it's important to document what we are doing with notes and comments. Comments in Javascript are ignored when Javascript is run and are simply used for developer usage.</p>
+						<p>There are two methods to write comments in javascript. To write a single line comment, use two forward-slashes - <strong>//</strong>.</p>
+						<p>Multi-line comments are represented by an opening /* and closing */. Any text or code between those lines will be ignored by Javascript.</p>
+					</div>
+					<div class="code">
+						<pre>
+							<code class="language-javascript">
+							// This is single-line comment
+
+							/*
+							This is a multiline comment.
+							It is used to write paragraphs
+							of text within your code.
+							*/
+							</code>
+						</pre>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="container">
+					<div class="display">
+						<h2>Brackets</h2>
+						<p>Javascript uses different types of brackets within it's syntax. Each type of brackets displays a different class of data and when reading code, the brackets can help to understand the programming path. </p>
+						<p>Square brackets are used to notate an array of data.</p>
+						<p>Curly Braces are used to notate an Object.</p>
+						<p>Rounded brackets are used to accept arguments and create placeholders for data.</p>
+					</div>
+					<div class="code">
+						<pre>
+							<code class="language-javascript">
+							[] // Array
+							{} // Object
+							() // Parantheses
+							</code>
+						</pre>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="container">
+					<div class="display">
 						<h2>Variables</h2>
 						<p>Within Javascript and many other programming languages, data can be stored in what are called <strong>variables</strong>.</p>
 						<p><strong>Variables</strong> are used to store information that may be used often, or store the result of a computational equation.</p>
@@ -82,10 +104,34 @@
 						<pre>
 							<code class="language-javascript">
 								var myFirstVariable = "Hello World!";
-								myFirstVariable; // Outputs "Hello World!"
+								myFirstVariable; // Returns "Hello World!"
 
 								var mySecondVariable = 99;
-								mySecondVariable; //Outputs 99
+								mySecondVariable; //Returns 99
+							</code>
+						</pre>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="container">
+					<div class="display">
+						<h2>Console</h2>
+						<p>Since Javascript works mainly behind the scenes, it's important for us to see what is happening in our browser. By using console.log(); we can have messages and data show up in our browsers console.</p>
+						<p>Within the parantheses of the statement, you can pass in a <strong>variable</strong>, <strong>string</strong>, <strong>number</strong> or <strong>boolean</strong> and have that value returned within the browsers console.</p>
+					</div>
+					<div class="code">
+						<pre>
+							<code class="language-javascript">
+							console.log("Hello, I'm a string!");
+							// Outputs to the console
+							"Hello, I'm a string!"
+
+							console.log(061314);
+							// Outputs to the console
+							061314
+
+
 							</code>
 						</pre>
 					</div>
@@ -121,6 +167,34 @@
 
 								15 / 3
 								// Outputs 5
+							</code>
+						</pre>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="container">
+					<div class="display">
+						<h2>Concatenation</h2>
+						<p>Data types can be combined to create a new value through concatenation. The operator used for concatenation is a <strong>plus sign</strong>.</p>
+						<p>To combine two or more strings into one, simply use the <strong>+</strong> operator in between. The output will be one string.</p>
+						<p>Adding a number and a boolean value to a string can be acheived through concatenation as well, however, note that the resulting data will be a string.</p>
+						<p>When concatenating data, make note that no spaces will be created. For example, "hello" + "world" will result in "helloworld". Add a space where needed to each string, or create an empty string with a space.</p>
+					</div>
+					<div class="code">
+						<pre>
+							<code class="language-javascript">
+								"Hello" + "World"
+								// Outputs "HelloWorld"
+
+								"I'm" + 29
+								// Outputs "I'm29"
+
+								"Hi, my name is " + "Drew"
+								// Outputs "Hi, my name is Drew"
+
+								"I live in" + " " + "Toronto"
+								// Outputs "I live in Toronto"
 							</code>
 						</pre>
 					</div>
@@ -198,14 +272,26 @@
 				<div class="container">
 					<div class="display">
 						<h2>Functions</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ratione, vitae quas similique, reiciendis officiis autem harum laudantium culpa blanditiis aperiam? Ipsa dolor minima assumenda. Amet numquam nostrum sit neque.</p>
+						<p>Functions are used to create blocks of code that you can call within your code. To create a function, use the <strong>function</strong> keyword and give it a name. <strong>Calling</strong> the function involves using the name you created.</p>
+						<p>Within the parantheses, you have the ability to create placeholders for arguments. These placeholders are variables that are called within the function. When calling the function, you can pass data into the parantheses to be evaluated. If no arguments are to be passed, simply leave the brackets empty.</p>
+						<p>Following the parantheses are an opening and closing pair of curly braces that indicate the code to be evaluated when the function is called. Everything inside of these curly braces is called a block statement.</p>
+						<p>The alternate syntax for creating a function is to declare a variable with a name and set the value of it to a function.</p>
+						<p></p>
 					</div>
 					<div class="code">
 						<pre>
 							<code class="language-javascript">
-								function addMe(a,b){
-								    return (a + b);
+
+								function sayHello() {
+								  console.log("Hi!");
 								}
+
+								var addMe = function(a,b){
+								  return a + b;
+								}
+
+								sayHello();
+								// Outputs "Hi!"
 
 								addMe(2,4);
 								// Outputs 8
@@ -218,12 +304,20 @@
 				<div class="container">
 					<div class="display">
 						<h2>Array</h2>
-						<p></p>
+						<p>An array is a collection of values. To declare an array, create a variable with a name and set the value to opening and closing square brackets. Inside the brackets, all data types can be accepted, but must be seperated by a comma.</p>
+						<p>To access data within an array, call the variable name you assigned to array. You will be returned the entire array with the square brackets.</p>
+						<p>To access a specific value inside of the array, call the variable name you assigned but append opening and closing square brackets with a number value inside, that corresponds to the index of the data inside. Note that arrays use Index-based ordering, so all values start at 0 and move incrementally.</p>
 					</div>
 					<div class="code">
 						<pre>
 							<code class="language-javascript">
 								var myFirstArray = ["string", 99,  true];
+
+								console.log(myFirstArray);
+								// Outputs ["string", 99,  true]
+
+								console.log(myFirstArray[1]);
+								// Outputs 99
 							</code>
 						</pre>
 					</div>
@@ -233,16 +327,72 @@
 				<div class="container">
 					<div class="display">
 						<h2>Object</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ratione, vitae quas similique, reiciendis officiis autem harum laudantium culpa blanditiis aperiam? Ipsa dolor minima assumenda. Amet numquam nostrum sit neque.</p>
+						<p>Similar to an array, is an object. An object contains data, much like an array however, they are represented as properties and values. These are called <strong>key/value pairs</strong>. Each pair is seperated by a comma.</p>
+						<p>To declare an object, create a variable with a name and set it's value to a set of opening and closing <strong>curly braces</strong>. Inside, declare a property and use a colon to define it's value. The value can be any data type, a variable you've created previously, an array, or a function.</p>
+						<p>To access the data inside of an object, you can simply call the object name and you will get back the object as a whole. To access specific properties inside, call the object by name, but append the property name with a period. ie <strong>object.propertyName</strong>.</p>
+						<p>To access data that is the stored in an array as the value of a property, use the square bracket notation from the array syntax to have the value returned. <strong>object.propertyName[i]</strong>. </p>
+						<p>A property can also hold another object and is accessed through the same syntax as before, simply reference the heirarchy of the object by name. These objects are referred to as <strong>Nested Objects</strong>.</p>
 					</div>
 					<div class="code">
 						<pre>
 							<code class="language-javascript">
 							var myFirstObject = {
-							    itemOne: "String",
-							    itemTwo: 1027,
-							    itemThree:true
+							  itemOne: "String",
+							  itemTwo: 1027,
+							  itemThree:true,
+							  itemFour: ["Hello", "Goodbye"],
+							  itemFive: {
+							    subItemOne: "I'm a nested object!",
+							    subItemTwo: "So am I!"
+							  }
 							};
+
+							console.log(myFirstObject);
+							// Outputs Object {itemOne: "String", itemTwo: 1027, itemThree: true, itemFour: ["Hello", "Goodbye"]}
+
+							console.log(myFirstObject.itemOne);
+							// Outputs "String"
+
+							console.log(myFirstObject.itemFour[2]);
+							// Outputs "Goodbye"
+
+							console.log(myFirstObject.itemFive.subItemOne);
+							// Outputs "I'm a nested object!"
+							</code>
+						</pre>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="container">
+					<div class="display">
+						<h2>Method</h2>
+						<p>One of the powers of an object is the ability to set the value of a property to a function. This resulting <strong>key/value</strong> pair is called a <strong>method</strong>.</p>
+						<p>Just like the alternate syntax for creating a function when a variable is created and assigned a function, a method is referenced by a property name that has a value of a function.</p>
+						<p>When creating a method, the <strong>parantheses</strong> are required after the function keyword and can be empty or have placeholders for arguments to be passed.</p>
+						<p>To call a method, the object syntax is still used, however, you must use the property name with a pair of parantheses, much like calling a function.</p>
+
+					</div>
+					<div class="code">
+						<pre>
+							<code class="language-javascript">
+							var myObject = {
+							  propertyOne: "Hello Drew",
+							  propertyTwo: "Goodbye Drew",
+							  propertyThree: function() {
+							    console.log("I'm a method!");
+							  },
+							  propertyFour: function(name) {
+							    console.log("Nice to meet you " + name);
+							  }
+							};
+
+							console.log(myObject.propertyThree());
+							// Outputs "I'm a method!"
+
+							console.log(myObject.propertyFour("Drew"));
+							// Outputs "Nice to meet you Drew"
+
 							</code>
 						</pre>
 					</div>
@@ -252,15 +402,20 @@
 				<div class="container">
 					<div class="display">
 						<h2>Conditions</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ratione, vitae quas similique, reiciendis officiis autem harum laudantium culpa blanditiis aperiam? Ipsa dolor minima assumenda. Amet numquam nostrum sit neque.</p>
+						<p>Conditions can be used to control program flow. Using an <strong>if/else</strong> statement, you can affect the outcome of the program.</p>
+						<p>A standard if/else statement uses an if statement followed by parantheses. Inside of the parantheses, you enter a <strong>comparison equation</strong>. Following the parantheses are opening and closing curly braces. Inside of the curly braces is a block statement containing the code to be executed.</p>
+						<p>Following the closing curly brace you provide an else statement that includes opening and closing curly braces with a block statement inside if the initial if condition was not met.</p>
+						<p>To provide additional conditions and executions, insert <strong>else if ()</strong> statements between the initial if and the closing else statement.</p>
 					</div>
 					<div class="code">
 						<pre>
 							<code class="language-javascript">
 							if (5 > 10) {
 							  console.log("hello");
-							} else if (5 < 10) {
+							} else if (3 < 10) {
 							  console.log("goodbye");
+							} else {
+							  console.log("see ya");
 							}
 							</code>
 						</pre>
@@ -273,7 +428,6 @@
 
 
 	<script src="scripts/vendor/jquery.min.js"></script>
-	<script src="scripts/vendor/modernizr.js"></script>
 	<script src="scripts/vendor/prism.js"></script>
 	<script src="scripts/main.min.js"></script>
 
