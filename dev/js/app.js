@@ -13,7 +13,7 @@ anatomy.details = [
 		{ selector: '.setValue', hint: 'Set a value of', position: 'bottom'},
 		{ selector: '.array', hint: 'Array', position: 'bottom'},
 		{ selector: '.object', hint: 'Object', position: 'bottom'},
-		{ selector: '.parantheses', hint: 'Parantheses', position: 'bottom'},
+		{ selector: '.parentheses', hint: 'Parentheses', position: 'bottom'},
 		{ selector: '.variable', hint: 'Variable Name', position: 'bottom'},
 		{ selector: '.compareOp', hint: 'Comparison Operator', position: 'bottom'},
 		{ selector: '.variable', hint: 'Variable', position: 'bottom'}
